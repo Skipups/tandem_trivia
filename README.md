@@ -18,6 +18,6 @@ In the terminal, open a folder into which you want to save the repo
 
 Run: git clone https://github.com/Skipups/tandem_trivia.git
 
-Run: npm install
+Enter into the trivia folder and run: npm install and then run: npm:start
 
-Run: npm start
+App will open. Happy playing!
