@@ -4,8 +4,6 @@
   font-family: "Raleway", sans-serif;
 }
 
-
-
 .container {
   position: absolute;
   max-width: 800px;
@@ -20,7 +18,6 @@
   left: 0px;
   right: 0px;
   margin: auto;
- 
 }
 @media (min-width: 769px) {
   .container {
@@ -30,7 +27,7 @@
 
 .title {
   position: relative;
-  background-color: rgb(240, 128, 206, .5);
+  background-color: rgb(240, 128, 206, 0.5);
   color: rgb(255, 255, 255);
   padding: 20px;
   font-size: 1.8em;
