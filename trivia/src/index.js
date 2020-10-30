@@ -14,10 +14,10 @@ class App extends Component{
      currentQuestion:0
   }
   getQuestions = () => { 
-    random10Questions4incorrect().then(questions => { 
-      this.setState({questionData: questions}); 
-    }); 
-  }; 
+   const newQuestions = random10Questions4incorrect()
+      this.setState({questionData: newQuestions}); 
+    }; 
+  
 // getQuestions=()=>{  this.setState({questionData: random10Questions4incorrect })
 //     console.log('random10Questions', random10Questions4incorrect )
 //     this.setState({ 

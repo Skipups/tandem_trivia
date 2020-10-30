@@ -133,11 +133,11 @@ function shuffle(array) {
 }
 
 
-const random10Questions4incorrect = (n = 10) => {
-  const random10Questions =shuffle(questionData).slice(0, n)
+function random10Questions4incorrect () {
+  const random10Questions =shuffle(questionData).slice(0, 10)
 
   //add correct answer to the 3 incorrect options, added questionId
-  const random10Questions4incorrect=[]
+  const shuffledDataWIncorrect=[]
 
   for( let i=0; i<random10Questions.length; i++){
     let questionObj=random10Questions[i]
@@ -146,11 +146,11 @@ const random10Questions4incorrect = (n = 10) => {
 
  const shuffledIncorrect =shuffle(fourIncorrect);
 const result={question:question, correct:correct, incorrect: shuffledIncorrect, questionId: i }
-random10Questions4incorrect.push(result)
+shuffledDataWIncorrect.push(result)
   }
 
     
-  return   Promise.resolve(random10Questions4incorrect)
+  return   shuffledDataWIncorrect
 }
 
 

@@ -3,15 +3,12 @@
 * {
   font-family: "Raleway", sans-serif;
 }
-/* QuestionCount Component */
-.questionCount {
-  padding: 1.5rem 2.5rem 0;
-  font-size: 14px;
-}
+
+
 
 .container {
   position: absolute;
-  width: 1024px;
+  max-width: 800px;
   height: 800px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
@@ -23,15 +20,26 @@
   left: 0px;
   right: 0px;
   margin: auto;
+ 
+}
+@media (min-width: 769px) {
+  .container {
+    margin: 2.5rem auto;
+  }
 }
 
 .title {
   position: relative;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(240, 128, 206, .5);
   color: rgb(255, 255, 255);
   padding: 20px;
   font-size: 1.8em;
   border-radius: 5px;
+}
+
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
 }
 
 .question {
@@ -47,12 +55,13 @@
   padding: 15px;
   box-sizing: border-box;
   background-color: rgb(250, 250, 250);
+  border-radius: 5px;
 }
 
 .answerBtn {
   position: relative;
   padding: 10px;
-  background-color: rgb(250, 151, 37);
+  background-color: rgb(172, 245, 163);
   display: inline-block;
   margin: 10px;
   outline: none;
@@ -82,7 +91,7 @@
   font-size: 1.4em;
   padding: 10px;
   top: 350px;
-  background-color: rgb(46, 182, 46);
+  background-color: rgb(30, 182, 30);
   color: rgb(255, 255, 255);
   width: 150px;
   left: 0px;
