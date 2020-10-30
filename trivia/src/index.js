@@ -13,26 +13,32 @@ class App extends Component{
      responses:0,
      currentQuestion:0
   }
-getQuestions=()=>{  this.setState({questionData: random10Questions4incorrect })
-    console.log('random10Questions', random10Questions4incorrect )
-  }
-computerAnswer= (answer, correct)=>{
+  getQuestions = () => { 
+    random10Questions4incorrect().then(questions => { 
+      this.setState({questionData: questions}); 
+    }); 
+  }; 
+// getQuestions=()=>{  this.setState({questionData: random10Questions4incorrect })
+//     console.log('random10Questions', random10Questions4incorrect )
+//     this.setState({ 
+//       score:0,
+//       responses:0,
+//       currentQuestion:0})
+//       console.log('inside getQuestion this.state', this.state)
+//   }
+computeAnswer= (answer, correct)=>{
    if(answer === correct){
   this.setState({score: this.state.score +1})
   }
 this.setState({responses:this.state.responses+1})
-console.log('score',this.state.score, this.state.responses)
 this.setNextQuestion()
   }
 
 playAgain=()=>{
  
   this.getQuestions()
-    this.setState({ questionData:[],
-      score:0,
-      responses:0,
-      currentQuestion:0})
-      console.log('inside playAgain, new data', this.state.questionData)
+  this.setState({score: 0, responses: 0, currentQuestion:0});
+  console.log('inside playAgain, new data', this.state.questionData)
 
   }
   setNextQuestion=()=>{
@@ -48,11 +54,13 @@ this.getQuestions();
 
 render(){
   const current = this.state.questionData[this.state.currentQuestion]
-  console.log('current', current)
+  
     return(
 <div className='container'>
 <div className='title'>Tandem Trivia</div>
-<QuestionCount counter={this.state.responses} total={this.state.questionData.length }/>
+{this.state.responses <10 ? 
+<QuestionCount counter={this.state.responses} total={this.state.questionData.length }/> : null
+ }
 
  {this.state.questionData.length >0 && 
 this.state.responses<10 &&
@@ -60,7 +68,7 @@ this.state.responses<10 &&
  <QuestionBox 
  question={current.question} 
  options={current.incorrect} 
- selected={answer => this.computerAnswer(answer, current.correct)} 
+ selected={answer => this.computeAnswer(answer, current.correct)} 
 
  key={current.questionId}/>
     
