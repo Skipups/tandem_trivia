@@ -14,7 +14,10 @@ npm (version >= 6.14.8)
 
 # Installation
 
-In the terminal, open a folder into which you want to save the rep
+In the terminal, open a folder into which you want to save the repo
+
 Run: git clone https://github.com/Skipups/tandem_trivia.git
+
 Run: npm install
+
 Run: npm start
