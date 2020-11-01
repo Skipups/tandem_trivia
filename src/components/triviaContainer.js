@@ -44,14 +44,10 @@ class TriviaContainer extends Component {
     const current = this.state.questionData[this.state.currentQuestion];
 
     return (
-<div>
-        {this.state.responses < 10 ? (
-          <QuestionCount
-            counter={this.state.responses}
-            total={this.state.questionData.length}
-          />
+     <div>
+          {this.state.responses === 10 ? (
+          <Result score={this.state.score} playAgain={this.playAgain} />
         ) : null}
-
         {this.state.questionData.length > 0 && this.state.responses < 10 && (
           <QuestionBox
             question={current.question}
@@ -60,10 +56,14 @@ class TriviaContainer extends Component {
             key={current.questionId}
           />
         )}
-
-        {this.state.responses === 10 ? (
-          <Result score={this.state.score} playAgain={this.playAgain} />
+         {this.state.responses < 10 ? (
+          <QuestionCount
+            counter={this.state.responses}
+            total={this.state.questionData.length}
+          />
         ) : null}
+
+     
     </div>
     );
   }

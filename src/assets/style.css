@@ -7,7 +7,7 @@
 .container {
   position: absolute;
   max-width: 800px;
-  height: 800px;
+  max-height: fit-content;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -25,8 +25,11 @@
   }
 }
 
-.title {
+.title, .questionCount, .question, .questionBox, .score-board{
   position: relative;
+  text-align: center;
+}
+.title {
   background-color: rgb(240, 128, 206, 0.5);
   color: rgb(255, 255, 255);
   padding: 20px;
@@ -35,8 +38,9 @@
 }
 
 .questionCount {
-  padding: 1.5rem 2.5rem 0;
+  padding: 1.5rem 3rem;
   font-size: 14px;
+ text-align: right;
 }
 
 .question {
@@ -44,9 +48,12 @@
   font-weight: bold;
   margin-bottom: 5px;
 }
+.questionBox :hover{
+  background-color: rgb(240, 128, 206, 0.5);
+}
 
 .questionBox {
-  position: relative;
+justify-content: space-around;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 5px;
   padding: 15px;
@@ -71,29 +78,39 @@
 }
 
 .score-board {
-  position: relative;
-  height: 700px;
+  /* position: relative;
+  height: 700px; */
+  justify-content: space-around;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
 }
 
 .score {
-  position: absolute;
-  width: 1024px;
-  font-size: 3em;
-  top: 250px;
-  text-align: center;
+  padding: 30px;
+  font-size: 2em;
 }
 
 .playBtn {
-  position: absolute;
   font-size: 1.4em;
   padding: 10px;
   top: 350px;
-  background-color: rgb(30, 182, 30);
+  background-color: rgb(172, 245, 163);
   color: rgb(255, 255, 255);
   width: 150px;
   left: 0px;
   right: 0px;
+  border-radius: 4px;
   margin: auto;
   outline: none;
   cursor: pointer;
+}
+
+.playBtn:hover {
+  background-color: rgb(240, 128, 206, 0.5);
+  text-transform: uppercase;
+  
 }
