@@ -25,7 +25,11 @@
   }
 }
 
-.title, .questionCount, .question, .questionBox, .score-board{
+.title,
+.questionCount,
+.question,
+.questionBox,
+.score-board {
   position: relative;
   text-align: center;
 }
@@ -40,7 +44,7 @@
 .questionCount {
   padding: 1.5rem 3rem;
   font-size: 14px;
- text-align: right;
+  text-align: right;
 }
 
 .question {
@@ -48,12 +52,12 @@
   font-weight: bold;
   margin-bottom: 5px;
 }
-.questionBox :hover{
+.questionBox :hover {
   background-color: rgb(240, 128, 206, 0.5);
 }
 
 .questionBox {
-justify-content: space-around;
+  justify-content: space-around;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 5px;
   padding: 15px;
@@ -111,6 +115,5 @@ justify-content: space-around;
 
 .playBtn:hover {
   background-color: rgb(240, 128, 206, 0.5);
-  text-transform: uppercase;
-  
+
 }
