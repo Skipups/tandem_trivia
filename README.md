@@ -6,9 +6,8 @@ Tandem Trivia is an application to test your trivia knowledge. You will see 1 qu
 # Frameworks and Libraries
 
 Built with React
-Built with React
 
-Tested with DOM Testing Library and React Testing Library
+Tested with Jest and React Testing Library
 
 # System Dependencies
 
@@ -20,7 +19,7 @@ npm (version >= 6.14.8)
 To run this project locally, you will need to have node installed.
 Open the terminal.
 Go to a folder where you would like to install the project. Then type the following to download the repo:
- git clone https://github.com/Skipups/tandem_trivia.git
+ `git clone https://github.com/Skipups/tandem_trivia.git`
 
 Make sure you're in the root directory of the repo, and type npm install in the terminal to install the dependencies and packages.
 
@@ -29,7 +28,7 @@ Open http://localhost:3000 to view it in the browser.
 
 # Testing
 
-A few simple tests have been written for this app. Running npm test launches the test runner in your terminal
+A few simple tests have been written for this app. Running npm test launches the test runner in your terminal.
 
 =======
 # Happy Playing!
